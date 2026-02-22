@@ -37,8 +37,6 @@ kotlin {
         }
     }
 
-    jvm()
-
     @OptIn(ExperimentalKotlinGradlePluginApi::class)
     dependencies {
         implementation(libs.compose.runtime)
