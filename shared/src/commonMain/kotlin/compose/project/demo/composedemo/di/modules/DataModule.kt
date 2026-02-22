@@ -11,4 +11,6 @@ val dataModule = module {
     single { AppDatabase(get()) }
     single { get<AppDatabase>().appDatabaseQueries }
     single<ILocalRocketLaunchesDataSource> { LocalRocketLaunchesDataSource(get()) }
+
+    single<IRocketLaunchesRepository> { RocketLaunchesRepository(get(), get(), Dispatchers.Default) }
 }

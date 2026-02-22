@@ -22,6 +22,7 @@ ktor = "3.4.0"
 kotlinx-coroutines = "1.10.2"
 dateTime = "0.7.1"
 sqldelight = "2.0.1"
+mokkery = "3.2.0"
 
 [libraries]
 # Test
@@ -86,3 +87,4 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 androidLint = { id = "com.android.lint", version.ref = "agp" }
 # SQLDelight Plugin
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+mokkery = { id = "dev.mokkery", version.ref = "mokkery" }
