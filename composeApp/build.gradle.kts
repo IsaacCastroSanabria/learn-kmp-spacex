@@ -18,6 +18,7 @@ kotlin {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_11
         }
+
         androidResources {
             enable = true
         }
@@ -56,8 +57,8 @@ kotlin {
         implementation(libs.koin.compose.viewmodel)
         implementation(libs.koin.compose.viewmodel.navigation)
 
-        implementation(libs.koin.core)
-        testImplementation(libs.koin.test)
+        implementation(projects.composeApp)
+        implementation(projects.shared)
 
         testImplementation(libs.kotlin.test)
     }
