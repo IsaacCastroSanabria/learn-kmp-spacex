@@ -6,10 +6,9 @@ import kotlinx.coroutines.IO
 import org.koin.dsl.module
 
 val dataModule = module {
-    single<IRemoteRocketLaunchesDataSource> {
-        RemoteRocketLaunchesDataSource(
-            get(),
-            Dispatchers.IO
-        )
-    }
+    single<IRemoteRocketLaunchesDataSource> { RemoteRocketLaunchesDataSource(get(), Dispatchers.IO) }
+    single { get<DriverFactory>().createDriver() }
+    single { AppDatabase(get()) }
+    single { get<AppDatabase>().appDatabaseQueries }
+    single<ILocalRocketLaunchesDataSource> { LocalRocketLaunchesDataSource(get()) }
 }
