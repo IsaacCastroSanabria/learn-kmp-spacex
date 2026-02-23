@@ -55,7 +55,6 @@ kotlin {
         implementation(libs.koin.compose.viewmodel)
         implementation(libs.koin.compose.viewmodel.navigation)
 
-        implementation(projects.composeApp)
         implementation(projects.shared)
 
         testImplementation(libs.kotlin.test)
